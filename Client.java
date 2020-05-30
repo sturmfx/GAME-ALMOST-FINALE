@@ -43,7 +43,7 @@ public class Client extends JFrame implements KeyListener
 
     public Client(double width, double height) throws IOException
     {
-        bot_distance_to_shoot = (int) ((width + height)/4);
+        bot_distance_to_shoot = (int) Math.sqrt((width * width + height * height)) / 2;
         random  = new Random();
         //map = Map.loadMap("dfgdfg");
         map = Map.map1();
